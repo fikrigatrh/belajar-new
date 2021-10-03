@@ -53,13 +53,11 @@ github.com/jackc/pgx/v4/stdlib
 github.com/jinzhu/inflection
 # github.com/jinzhu/now v1.1.2
 github.com/jinzhu/now
-# github.com/joho/godotenv v1.3.0
+# github.com/joho/godotenv v1.4.0
 ## explicit
 github.com/joho/godotenv
 # github.com/json-iterator/go v1.1.9
 github.com/json-iterator/go
-# github.com/konsorten/go-windows-terminal-sequences v1.0.2
-github.com/konsorten/go-windows-terminal-sequences
 # github.com/leodido/go-urn v1.2.0
 github.com/leodido/go-urn
 # github.com/mattn/go-isatty v0.0.12
@@ -68,15 +66,15 @@ github.com/mattn/go-isatty
 github.com/modern-go/concurrent
 # github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742
 github.com/modern-go/reflect2
-# github.com/pkg/errors v0.8.1
+# github.com/pkg/errors v0.9.1
 github.com/pkg/errors
-# github.com/rs/zerolog v1.15.0
+# github.com/rs/zerolog v1.25.0
 ## explicit
 github.com/rs/zerolog
 github.com/rs/zerolog/internal/cbor
 github.com/rs/zerolog/internal/json
 github.com/rs/zerolog/log
-# github.com/sirupsen/logrus v1.4.2
+# github.com/sirupsen/logrus v1.8.1
 ## explicit
 github.com/sirupsen/logrus
 # github.com/subosito/gotenv v1.2.0
@@ -87,7 +85,7 @@ github.com/subosito/gotenv
 github.com/tylerb/graceful
 # github.com/ugorji/go/codec v1.1.7
 github.com/ugorji/go/codec
-# golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
+# golang.org/x/crypto v0.0.0-20210921155107-089bfa567519
 golang.org/x/crypto/pbkdf2
 golang.org/x/crypto/sha3
 # golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4
@@ -100,6 +98,7 @@ golang.org/x/net/publicsuffix
 golang.org/x/sys/cpu
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
+golang.org/x/sys/windows
 # golang.org/x/text v0.3.7
 golang.org/x/text/cases
 golang.org/x/text/internal
@@ -116,7 +115,7 @@ golang.org/x/text/unicode/norm
 golang.org/x/text/width
 # gopkg.in/yaml.v2 v2.2.8
 gopkg.in/yaml.v2
-# gorm.io/driver/postgres v1.1.1
+# gorm.io/driver/postgres v1.1.2
 ## explicit
 gorm.io/driver/postgres
 # gorm.io/gorm v1.21.15
