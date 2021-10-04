@@ -1,10 +1,8 @@
 package controller
 
 import (
-	"final_project/models"
 	"final_project/usecase"
 	"github.com/gin-gonic/gin"
-	"log"
 	"net/http"
 )
 
@@ -20,28 +18,28 @@ func CreateUserController(r *gin.RouterGroup, usr usecase.UserUsecaseInterface) 
 	r.GET("/:userId/detail", handler.GetDetail)
 }
 
-func (u UserController) AddData(c *gin.Context)  {
-	var usr models.User
-
-	err := c.ShouldBindJSON(&usr)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, "error when binding")
-		return
-	}
-
-	log.Println(usr.Nama, "<<<< nama")
-	log.Println(usr.Alamat, "<<< alamat")
-
-	var alamat models.AlamatDetail
-
-	m := usr.Alamat.(map[string]interface{})
-	alamat.Kelurahan = m["kelurahan"].(string)
-
-
-	log.Println(alamat.Kelurahan, "><><><><> kelurahan")
-	 user := u.usr.Hmmm(usr)
-	c.JSON(http.StatusOK, user)
-}
+//func (u UserController) AddData(c *gin.Context)  {
+//	var usr models.User
+//
+//	err := c.ShouldBindJSON(&usr)
+//	if err != nil {
+//		c.JSON(http.StatusBadRequest, "error when binding")
+//		return
+//	}
+//
+//	log.Println(usr.Nama, "<<<< nama")
+//	log.Println(usr.Alamat, "<<< alamat")
+//
+//	var alamat models.AlamatDetail
+//
+//	m := usr.Alamat.(map[string]interface{})
+//	alamat.Kelurahan = m["kelurahan"].(string)
+//
+//
+//	log.Println(alamat.Kelurahan, "><><><><> kelurahan")
+//	 user := u.usr.Hmmm(usr)
+//	c.JSON(http.StatusOK, user)
+//}
 
 func (u UserController) GetFollower(c *gin.Context)  {
 	username := c.Param("username")

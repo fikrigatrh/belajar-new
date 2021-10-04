@@ -13,11 +13,11 @@ func NewUseUsecaseImpl(usr repo.UserRepoInterface) UserUsecaseInterface {
 	return &UserUsecaseStruct{usr: usr}
 }
 
-func (u UserUsecaseStruct) Hmmm(usr models.User) models.User {
-	user := u.usr.AddData(usr)
-
-	return user
-}
+//func (u UserUsecaseStruct) Hmmm(usr models.User) models.User {
+//	user := u.usr.AddData(usr)
+//
+//	return user
+//}
 
 func (u UserUsecaseStruct) GetFollower(username string) models.UserAPIDetail {
 	var res models.UserAPIDetail // buat variabel penampung yg tipe datanya model.Users

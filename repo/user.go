@@ -16,14 +16,8 @@ func NewUserRepoImpl() UserRepoInterface {
 }
 
 
-func (u *UserRepoStruct) AddData(usr models.User) models.User {
+func (u *UserRepoStruct) AddData(usr models.User) {
 
-	err := u.db.Create(&usr).Error
-	if err != nil {
-		return models.User{}
-	}
-
-	return usr
 }
 
 func (u *UserRepoStruct) ConsumeApi() models.UserAPI {

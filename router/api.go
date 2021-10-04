@@ -1,7 +1,6 @@
 package router
 
 import (
-	"final_project/config/db"
 	"final_project/controller"
 	"final_project/repo"
 	"final_project/usecase"
@@ -11,12 +10,12 @@ import (
 func NewRouter() *gin.Engine {
 
 	router := gin.New() // CALL LIBRARY GIN GONIC FOR ROUTER
-	DB := db.DB // CALL FUNCTION DB
+	//DB := db.DB // CALL FUNCTION DB
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
 
 	// CALL DEPENDENCY REPOSITORY
-	userRepo := repo.NewUserRepoImpl(DB)
+	userRepo := repo.NewUserRepoImpl()
 
 	// CALL DEPENDENCY USECASE
 	userUsecase := usecase.NewUseUsecaseImpl(userRepo)

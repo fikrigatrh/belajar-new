@@ -4,7 +4,6 @@ import "final_project/models"
 
 // 3
 type UserRepoInterface interface {
-	// AddData list all method function in package repo
-	AddData(usr models.User) models.User
+	// ConsumeApi AddData list all method function in package repo
 	ConsumeApi() models.UserAPI
 }
