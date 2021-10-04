@@ -19,8 +19,9 @@ func (u UserUsecaseStruct) Hmmm(usr models.User) models.User {
 	return user
 }
 
-func (u UserUsecaseStruct) GetCountFollower(username string) models.UserAPIDetail {
-	var res models.UserAPIDetail
+func (u UserUsecaseStruct) GetFollower(username string) models.UserAPIDetail {
+	var res models.UserAPIDetail // buat variabel penampung yg tipe datanya model.Users
+	// dimana di dalamnya ada attribut follower
 	usr := u.usr.ConsumeApi()
 	switch username {
 	case "SammyShark":

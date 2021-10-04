@@ -15,8 +15,8 @@ type UserController struct {
 func CreateUserController(r *gin.RouterGroup, usr usecase.UserUsecaseInterface)  {
 	handler := UserController{usr: usr}
 
-	r.POST("/user",  handler.AddData)
-	r.GET("/follower/:username", handler.GetCountFollower)
+	// create endpoint
+	r.GET("/follower/:username", handler.GetFollower)
 	r.GET("/:userId/detail", handler.GetDetail)
 }
 
@@ -43,9 +43,9 @@ func (u UserController) AddData(c *gin.Context)  {
 	c.JSON(http.StatusOK, user)
 }
 
-func (u UserController) GetCountFollower(c *gin.Context)  {
+func (u UserController) GetFollower(c *gin.Context)  {
 	username := c.Param("username")
-	res := u.usr.GetCountFollower(username)
+	res := u.usr.GetFollower(username)
 
 	c.JSON(http.StatusOK, res)
 }

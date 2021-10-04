@@ -5,15 +5,14 @@ import (
 	"final_project/config/env"
 	"final_project/models"
 	"github.com/go-resty/resty/v2"
-	"gorm.io/gorm"
 )
 
 type UserRepoStruct struct {
-	db *gorm.DB
+
 }
 
-func NewUserRepoImpl(db *gorm.DB) UserRepoInterface {
-	return &UserRepoStruct{db: db}
+func NewUserRepoImpl() UserRepoInterface {
+	return &UserRepoStruct{}
 }
 
 

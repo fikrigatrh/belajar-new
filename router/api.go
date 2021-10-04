@@ -21,7 +21,7 @@ func NewRouter() *gin.Engine {
 	// CALL DEPENDENCY USECASE
 	userUsecase := usecase.NewUseUsecaseImpl(userRepo)
 
-	newRoute := router.Group("/paymentMonitoring")
+	newRoute := router.Group("/user")
 	// CALL DEPENDENCY CONTROLLER
 	controller.CreateUserController(newRoute, userUsecase)
 

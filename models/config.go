@@ -7,6 +7,6 @@ type ServerConfig struct {
 	Username    string `env:"DB_USERNAME"`
 	Password    string `env:"DB_PASSWORD"`
 	ServiceHost string `env:"SERVICE_HOST"`
-	ServicePort string `env:"SERVICE_PORT"`
+	ServicePort string `env:"PORT"`
 	UrlJsonUser string `env:"URL_JSON_USER"`
 }

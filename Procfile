@@ -1,1 +1,0 @@
-web: bin/final_project
